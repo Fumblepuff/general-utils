@@ -1,5 +1,3 @@
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/enum_extensions.dart';
+export 'src/format.dart';
+export 'src/text_scale_box.dart';
