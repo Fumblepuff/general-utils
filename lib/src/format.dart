@@ -3,6 +3,31 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'enum_extensions.dart';
 
+Color primaryGreen = Color.fromARGB(255, 0, 90, 49);
+Color secondaryGreen = Color.fromARGB(255, 0, 112, 61);
+Color primaryOrange = Color.fromARGB(255, 255, 140, 1);
+Color secondaryOrange = Color.fromARGB(255, 255, 107, 24);
+Color primaryBrown = Color.fromARGB(255, 153, 51, 0);
+Color secondaryBrown = Color.fromARGB(255, 109, 48, 18);
+
+Map<String, dynamic> lightModeColors = {
+  'darkMode': false,
+  'background': primaryGreen,
+  'text': Colors.black,
+  'card': primaryOrange.withValues(alpha: 0.9),
+  'shadow': Colors.grey[600]!.withValues(alpha: 0.6),
+  'cardBorder': secondaryBrown, // Colors.grey[300]!
+};
+
+Map<String, dynamic> darkModeColors = {
+  'darkMode': true,
+  'background': Colors.black,
+  'text': Colors.white,
+  'card': Colors.black,
+  'shadow': Colors.grey[600]!.withValues(alpha: 0.6),
+  'cardBorder': primaryGreen,
+};
+
 // Text Styles
 TextStyle roboto = GoogleFonts.robotoMono(
   fontSize: 16,
@@ -39,42 +64,32 @@ TextStyle captionStyle = const TextStyle(
 ButtonStyle greenButtonStyle = ElevatedButton.styleFrom(
   foregroundColor: Colors.green.shade900,
   backgroundColor: Colors.green.shade200,
-  textStyle: roboto.copyWith(
-    fontSize: 14,
-  ),
+  textStyle: roboto.copyWith(fontSize: 14),
 );
 
 ButtonStyle redButtonStyle = ElevatedButton.styleFrom(
   foregroundColor: Colors.red.shade900,
   backgroundColor: Colors.red.shade200,
-  textStyle: roboto.copyWith(
-    fontSize: 14,
-  ),
+  textStyle: roboto.copyWith(fontSize: 14),
 );
 
 ButtonStyle blueButtonStyle = ElevatedButton.styleFrom(
   foregroundColor: Colors.blue.shade900,
   backgroundColor: Colors.blue.shade200,
-  textStyle: roboto.copyWith(
-    fontSize: 14,
-  ),
+  textStyle: roboto.copyWith(fontSize: 14),
 );
 
 ButtonStyle yellowButtonStyle = ElevatedButton.styleFrom(
   foregroundColor: Colors.yellow.shade900,
   backgroundColor: Colors.yellow.shade200,
-  textStyle: roboto.copyWith(
-    fontSize: 14,
-  ),
+  textStyle: roboto.copyWith(fontSize: 14),
 );
 
 ButtonStyle get inactiveButtonStyle {
   return ElevatedButton.styleFrom(
     foregroundColor: Colors.grey.shade700,
     backgroundColor: Colors.grey.shade300,
-    textStyle: roboto.copyWith(
-      fontSize: 14,
-    ),
+    textStyle: roboto.copyWith(fontSize: 14),
   );
 }
 
